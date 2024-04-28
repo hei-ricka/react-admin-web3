@@ -1,0 +1,6 @@
+import { LoadingIndicator, TextField, useGetOne } from "react-admin";
+
+export function UserField({ postId }: { postId: string | number }) {
+  const { data: user, isLoading } = useGetOne("users", { id: postId });
+  return <TextField record={user} source="name" label="test" />
+}
