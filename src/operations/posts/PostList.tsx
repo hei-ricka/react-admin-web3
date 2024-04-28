@@ -5,7 +5,7 @@ import { UserField } from "../common/components";
 export function PostList() {
   return (
     <List title="Post list">
-      <Datagrid rowClick="show" bulkActionButtons={false}>
+      <Datagrid rowClick="show">
         <TextField label="ID" source="id" />
         <TextField label="Title" source="title" />
         <FunctionField label="User" render={() => <UserField />} />
